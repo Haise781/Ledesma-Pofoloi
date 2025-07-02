@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christopher Ledesma - Galaxy Portfolio</title>
+    <meta name="description" content="UI/UX Designer & Front-End Developer - Creating stellar digital experiences" />
+    <meta name="author" content="Christopher Ledesma" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>" type="image/svg+xml">
+    
+    <meta property="og:title" content="Christopher Ledesma - Galaxy Portfolio" />
+    <meta property="og:description" content="UI/UX Designer & Front-End Developer - Creating stellar digital experiences" />
+    <meta property="og:type" content="website" />
+    
+    <style>
+      /* Loading animation */
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0B1426 0%, #1a237e 50%, #4a148c 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .loading-text {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.5rem;
+        color: #00e5ff;
+        animation: pulse 2s infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+    </style>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/style.css">
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="loading-text">Initializing Galaxy...</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">CL</a>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#fun-facts" class="nav-link">Fun Facts</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Canvas for Stars -->
+    <canvas id="starfield" class="starfield"></canvas>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="greeting">Hi, I'm</span>
+            <span class="name">Christopher Jho S. Ledesma</span>
+          </h1>
+          <div class="hero-subtitle">
+            <span class="typing-text" id="typing-text"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+          <p class="hero-description">
+            I build digital interfaces that don't just look good—they work flawlessly. 
+            UI/UX meets performance in every line of code I write.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Work</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <p>Scroll to explore</p>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+
+<section id="about" class="about section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      
+      <div class="about-text">
+        <div class="text-block">
+          <div class="about-text">
+            <div class="text-block">
+              <h3>Hello, Universe! 🌌</h3>
+              <p>
+                I'm Christopher Jho S. Ledesma — a passionate and purpose-driven UI/UX Designer and Front-End Developer currently studying Computer Science at the University of Nueva Caceres. With a strong eye for aesthetics and a mind wired for a clean code, I thrive on turning creative concepts into meaningful, user-centered web experiences.
+              </p>
+              <p>
+                My primary focus lies in designing responsive, intuitive interfaces that blend modern design with functional logic. I particularly enjoy building educational platforms, interactive portfolios, and role-playing websites that help fellow students—especially in the ICT track—discover and navigate their learning journeys with confidence and clarity. Each project I take on is crafted with care, using tools like Figma for design and VS Code for development.
+              </p>
+              <p>
+                I specialize in integrating subtle animations, parallax motion, and engaging layouts that bring websites to life—without compromising accessibility or performance. I believe great design should not only look beautiful, but also feel effortless and inclusive to use, across all screen sizes and devices.
+              </p>
+            </div>
+          </div>
+        
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-number" data-target="6">0</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="32">0</span>
+              <span class="stat-label">Awards & Recognition</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="about-image">
+        <div class="avatar-container">
+            <img src="King%20of%20the%20world%201.png" alt="Profile Image" class="avatar-img">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+    <!-- Experience Section -->
+
+      <section id="experience" class="experience section">
+        <div class="container">
+          <h2 class="section-title">Experience Timeline</h2>
+          <div class="timeline">
+
+                <div class="timeline-item">
+            <div class="timeline-date">2024 - 2025</div>
+            <div class="timeline-content">
+              <h3>UI/UX Design Intern</h3>
+              <h4>Immersion - UNC</h4>
+              <p>Participated in a senior high school work immersion program at UNC, 
+                where we were trained in UI/UX design fundamentals using Figma.
+                Focused on practical design workflows, component systems, and modern visual design trends.</p>
+              <ul>
+                <li>Learned Figma for wireframing, prototyping, and collaborative design</li>
+                <li>Designed interfaces for mobile and web applications</li>
+                <li>Explored layout grids, typography, and color theory in digital design</li>
+                <li>Collaborated on group projects simulating real-world design teams</li>
+              </ul>
+            </div>
+          </div>
+
+            <div class="timeline-item">
+              <div class="timeline-date">2023 - Present</div>
+              <div class="timeline-content">
+                <h3>E-Commerce Website UI/UX Designer</h3>
+                <h4>UI (E-Commerce Website) </h4>
+                <p>Designed the user interface and user experience for a functional e-commerce Website. 
+                  Focused on creating a seamless shopping experience with modern web design practices.</p>
+                <ul>
+                  <li>Created wireframes and mockups using Figma for product pages, cart, and checkout</li>
+                  <li>Implemented responsive layouts using HTML, CSS, and basic JavaScript</li>
+                  <li>Ensured intuitive navigation, clean visuals, and mobile-friendly UI</li>
+                  <li>Collaborated with classmates on backend integration and feature planning</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-date">2023 - 2024</div>
+              <div class="timeline-content">
+                <h3>Game Developer (Educational Project)</h3>
+                <h4>Grade 11 - TVL ICT Strand</h4>
+                <p>Developed an educational desktop game using Java as part of our Grade 11 Software Festival project.
+                   The game aimed to make learning engaging and interactive for students by incorporating quizzes and gamified content.</p>
+                <ul>
+                  <li>Designed gameplay mechanics, user interface, and scoring system</li>
+                  <li>Applied object-oriented programming concepts in Java</li>
+                  <li>Collaborated in a team to handle planning, coding, and debugging</li>
+                  <li>Presented the game during the school project</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-date">2019 - 2021</div>
+              <div class="timeline-content">
+                <h3>Arduino & Robotics Enthusiast</h3>
+                <h4>Personal Projects</h4>
+                <p>Started exploring electronics and robotics using Arduino microcontrollers. 
+                  Built hands-on projects that introduced concepts of automation, sensors, and basic programming.</p>
+                <ul>
+                  <li>Assembled and programmed line-following and obstacle-avoiding robots</li>
+                  <li>Worked with sensors like ultrasonic, IR, and temperature modules</li>
+                  <li>Learned basic circuit design and wiring using breadboards</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Skills Section -->
+<section id="skills" class="skills section">
+  <div class="container">
+    <h2 class="section-title">Skills & Expertise</h2>
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <h3>UI/UX Design</h3>
+        <div class="skills-list">
+          <div class="skill-item">
+            <div class="skill-icon">🖌️</div>
+            <span>Figma</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">📐</div>
+            <span>Adobe XD</span>
+            <div class="skill-level">Beginner</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">🖼️</div>
+            <span>Photoshop</span>
+            <div class="skill-level">Beginner</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">🎮</div>
+            <span>Godot</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">✏️</div>
+            <span>Sketch</span>
+            <div class="skill-level">Advanced</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">🧠</div>
+            <span>Principle</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Programming Language</h3>
+        <div class="skills-list">
+          <div class="skill-item">
+            <div class="skill-icon">🌐</div>
+            <span>HTML5</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">🎨</div>
+            <span>CSS3/SCSS</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">⚡</div>
+            <span>JavaScript</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">☕</div>
+            <span>Java</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">💠</div>
+            <span>C++</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">🐍</div>
+            <span>Python</span>
+            <div class="skill-level">Advanced</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Tools & Workflow</h3>
+        <div class="skills-list">
+          <div class="skill-item">
+            <div class="skill-icon">🔧</div>
+            <span>Git/GitHub</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">🎯</div>
+            <span>Tailwind CSS</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">📱</div>
+            <span>Responsive Design</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">♿</div>
+            <span>Accessibility</span>
+            <div class="skill-level">Beginner</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">⚛️</div>
+            <span>React.js</span>
+            <div class="skill-level">Intermediate</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+          <section id="projects" class="projects section">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid">
+
+      <div class="project-card" data-bg="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+        <div class="project-image">
+          <img src="IKIGAI.png" alt="Educational RPG" class="avatar-img">
+        </div>
+        <div class="project-content">
+          <h3>Game Development (Software Festival)</h3>
+            <p>An educational game where players can choose a character to learn different subjects such as Math, Science, History, and Sports. 
+                 Each character represents a specific field, making learning more engaging and interactive through gameplay.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-bg="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+        <div class="project-image">
+          <img src="adad.png" alt="Portfolio Animation Project" class="avatar-img" />
+        </div>
+        <div class="project-content">
+         <h3>PROJECT 100</h3>
+              <p>An innovative educational role-playing game (ERPG) developed for the research Award in Grade 12 ICT. 
+               This interactive platform enhances programming and problem-solving skills through quest-based challenges and scenario-based simulations.</p>
+          <div class="project-tags">
+            <span class="tag">Godot</span>
+            <span class="tag">Game Design</span>
+            <span class="tag">Education</span>
+            <span class="tag">SQL/span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-bg="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+        <div class="project-image">
+          <img src="space.png" alt="Space Shooter Game" class="avatar-img"/>
+        </div>
+        <div class="project-content">
+          <h3>Space Shooter Game</h3>
+          <p>A fast-paced 2D space shooter game where players control a spaceship to destroy incoming enemies and dodge asteroids.
+             Features dynamic shooting mechanics, responsive controls, dark-themed UI, and retro-style pixel visuals for an exciting arcade experience.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Figma Design</span>
+          </div>
+        </div>
+      </div>
+
+            <div class="project-card" data-bg="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+              <div class="project-image">
+                <img src="book.png" alt="Book Library Platform" class="avatar-img"/>
+              </div>
+              <div class="project-content">
+                <h3>Book Library</h3>
+                <p>A digital book management system with a clean UI, allowing users to browse, borrow, and review titles. 
+                  Designed for educational institutions and reading communities.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">LocalStorage</span>
+                  <span class="tag">Figma</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="project-card" data-bg="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+              <div class="project-image">
+                <img src="ecommerce3-1.jpg" alt="E-Commerce Website" />
+              </div>
+              <div class="project-content">
+                <h3>E-Commerce</h3>
+                <p>A front-end simulation of an online marketplace inspired by Lazada and Shein Collaboration.
+                   Features product listings, shopping cart functionality, and responsive design optimized for mobile devices.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Tailwind.css</span>
+                  <span class="tag">Figma</span>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+      </section>
+
+
+    <!-- Case Studies Section
+   <section id="case-studies" class="case-studies section">
+  <div class="container">
+    <h2 class="section-title">✨ Project Spotlights</h2>
+    <div class="case-studies-grid">
+
+      <div class="case-study">
+        <div class="case-study-header">
+          <h3>Designing My Interactive Space Portfolio</h3>
+          <span class="case-study-category">Web Design & Branding</span>
+        </div>
+        <div class="case-study-content">
+          <div class="case-study-problem">
+            <h4>🌠 The Vision</h4>
+            <p>I wanted a portfolio that didn’t just show my work — I wanted it to feel like an experience. The challenge was creating a custom-coded site that felt futuristic, smooth, and responsive, while staying lightweight and accessible.</p>
+          </div>
+
+          <div class="case-study-process">
+            <h4>🧪 My Process</h4>
+            <ul>
+              <li>Sketched layouts and planned sections for clarity</li>
+              <li>Used a dark galaxy-themed color palette with glowing effects</li>
+              <li>Added scroll animations, parallax layers, and custom interactions</li>
+              <li>Focused on mobile-first design and clean HTML5 structure</li>
+            </ul>
+          </div>
+
+          <div class="case-study-solution">
+            <h4>🛠 Final Result</h4>
+            <p>The website includes 8 immersive sections, canvas-based animations, and glowing UI elements — all built using only HTML, CSS, and vanilla JS. Every detail supports my identity as a designer and front-end developer.</p>
+          </div>
+
+          <div class="case-study-results">
+            <h4>🚀 Impact</h4>
+            <div class="results-grid">
+              <div class="result-item">
+                <span class="result-number">100%</span>
+                <span class="result-label">Custom Built Without Frameworks</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">0</span>
+                <span class="result-label">Page Templates Used</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">∞</span>
+                <span class="result-label">Creative Control Achieved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <div class="case-study-header">
+          <h3>Fun Facts Generator With Floating Planets</h3>
+          <span class="case-study-category">Mini App & UI Experiment</span>
+        </div>
+        <div class="case-study-content">
+          <div class="case-study-problem">
+            <h4>🎯 The Idea</h4>
+            <p>To add some personality to my site, I wanted a "Fun Facts" section that felt alive — not just static text. My goal was to build something interactive and visually fun while still aligned with the galaxy aesthetic.</p>
+          </div>
+
+          <div class="case-study-process">
+            <h4>⚙️ What I Built</h4>
+            <ul>
+              <li>Random fact generator powered by JavaScript</li>
+              <li>Designed floating planet icons orbiting facts</li>
+              <li>Added smooth fade-ins and hover animations</li>
+              <li>Used scroll-triggered animation for engagement</li>
+            </ul>
+          </div>
+
+          <div class="case-study-solution">
+            <h4>💫 The Experience</h4>
+            <p>The section became one of the most playful parts of my portfolio. It’s interactive, light-hearted, and fun — but still responsive, accessible, and performance-friendly across devices.</p>
+          </div>
+
+          <div class="case-study-results">
+            <h4>🌌 Results</h4>
+            <div class="results-grid">
+              <div class="result-item">
+                <span class="result-number">15+</span>
+                <span class="result-label">Random Facts Loaded</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">3s</span>
+                <span class="result-label">Avg. Engagement per Scroll</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">✨</span>
+                <span class="result-label">Adds Personality to My Brand</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+
+
+    <!-- Fun Facts Section -->
+    <section id="fun-facts" class="fun-facts section">
+      <div class="container">
+        <h2 class="section-title">Fun Facts & Personal Side</h2>
+        <div class="fun-facts-content">
+          <div class="fun-facts-grid">
+            <div class="fact-card">
+
+              <div class="fact-icon">🏝️</div>
+              <h3>Island Heritage</h3>
+              <p>Born and raised in the Philippines From Camarines Sur, Naga City. This diverse cultural background influences my inclusive design approach.</p>
+            </div>
+
+              <div class="fact-card">
+                <div class="fact-icon">✍️</div>
+                <h3>Writer at Heart</h3>
+                <p>I love writing poetry and keeping a personal journal. 
+                  Expressing thoughts through words helps me reflect, stay creative, and connect deeply with emotions and experiences.</p>
+              </div>
+
+
+            <div class="fact-card">
+              <div class="fact-icon">🎮</div>
+              <h3>Passionate Gamer</h3>
+              <p>I love playing fast-paced FPS games and challenging Souls-like titles. 
+                These genres inspire me with their immersive gameplay, strategic design, and intense user experiences.</p>
+            </div>
+
+            <div class="fact-card">
+              <div class="fact-icon">🖥️</div>
+              <h3>Computer Servicing Enthusiast</h3>
+              <p>I enjoy diagnosing, repairing, and maintaining computer systems. From hardware upgrades to software troubleshooting, I find satisfaction in solving tech problems and helping others keep their devices running smoothly.</p>
+            </div>
+
+            <div class="fact-card">
+              <div class="fact-icon">🐾</div>
+              <h3>Animal Lover</h3>
+              <p>I enjoy spending time with my pets and believe that caring for animals teaches empathy, responsibility, and joy.</p>
+            </div>
+
+            <div class="fact-card">
+              <div class="fact-icon">🎬</div>
+              <h3>Movie Lover</h3>
+              <p>I enjoy watching action and story-driven films—they fuel my creativity and inspire my design style.</p>
+            </div>             
+          </div>  
+
+          <div class="quirky-facts">
+            <h3> My Quirky Habits</h3>
+            <ul class="quirky-list">
+                <li>🕹️ After working for 8 hours, I play games for 2 to 3 hours to relax and recharge.</li>
+                <li>🖥️ I change my computer desk setup every week or month to spark creativity and prevent design blocks.</li>
+                <li>🌌 I do my best creative work between 8 PM and 1 AM, when the world is quiet.</li>
+                <li>🎧 I have different Spotify playlists for each design phase: research, wireframing, visual design, and coding.</li>
+                <li>💻 I practice learning programming languages every night by creating simple projects.</li>
+                <li>👐 I rehearse gesture-based interactions in the air before implementing them in prototypes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-content">
+          <div class="contact-text">
+            <h3>Ready to collaborate?</h3>
+            <p>
+                As a passionate and dedicated ICT student, I'm always excited to explore new opportunities, 
+                work with fellow creatives, 
+                and build meaningful digital experiences. Whether you're a fellow student, 
+                developer, designer,I’m open to collaborating projects, 
+                passion-based innovations, or even experimental ideas that help us grow together. 
+                Let's turn ideas into interactive realities and fureristec. Ready to collaborate?
+            </p> 
+            <div class="contact-info">
+              <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <span>cjsamboledesma@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <span>09338118136</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span>Zone 6 Sitio Santiago San Felipe Naga City</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">⏰</span>
+                <span>Available Mon-Fri, 9 AM - 6 PM</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required>
+              <label for="name"> Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required>
+              <label for="email"> Email</label>
+            </div>
+            <div class="form-group">
+              <select id="project-type" name="project-type" required>
+                <option value="">Select Project Type</option>
+                <option value="ui-ux-design">UI/UX Design</option>
+                <option value="frontend-development">Front-End Development</option>
+                <option value="design-system">Design System</option>
+                <option value="other">Other</option>
+              </select>
+              <label for="project-type">Project Type</label>
+            </div>
+            <div class="form-group">
+              <select id="budget" name="budget">
+                <option value="">Budget Range (Optional)</option>
+                <option value="under-5k">Under ₱2,000</option>
+                <option value="5k-10k">₱3,000 - ₱15,000</option>
+                <option value="10k-25k">₱5,000 - ₱6,000</option>
+                <option value="25k-plus">₱7,000+</option>
+                <option value="discuss">Let's Discuss</option>
+              </select>
+              <label for="budget">Budget Range</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="message">Tell me about your project</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Christopher Ledesma</h4>
+            <p>
+              UI/UX Designer & Front-End Developer dedicated to crafting responsive, accessible, and visually engaging web experiences. Passionate about blending design and code to build interfaces that are both intuitive and impactful.</p>
+                      </div>
+          <div class="footer-section">
+            <h4>Social Medias</h4>
+              <ul>
+                <li><a>📘 Facebook</a></li>
+                <li><a>📺 YouTube</a></li>
+                <li><a>💻 GitHub</a></li>
+                <li><a>✉️ Email</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Christopher Ledesma. Made with Anger and Fraustration</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+      <span>↑</span>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
